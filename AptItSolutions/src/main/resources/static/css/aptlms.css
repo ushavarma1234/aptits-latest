@@ -6,6 +6,18 @@
 html{
     scroll-behavior: smooth;
 }
+
+.img-fluid{
+    width: 50%;
+    margin-left: 30px;
+    border-radius: 10px;
+    height:50px;
+}
+.fixed-size-image {
+    width: 106px;
+   
+ 
+  }
 .fa-twitter{
     background-color: #0090D2;
     color: #fff;
@@ -15,7 +27,7 @@ html{
     align-items: center;
     justify-content: center;
     padding-top: 7px;
-    border-radius: 5px;
+   
 }
 .fa-whatsapp{
     background-color: #0de510;
@@ -26,7 +38,7 @@ html{
     align-items: center;
     justify-content: center;
     padding-top: 7px;
-  
+   
 }
 .fa-instagram{
     background-color: #E4405F;
@@ -39,34 +51,13 @@ html{
     padding-top: 7px;
     
 }
-.socialfooter .fa-instagram{
-    background-color: #db0a0a;
-    color: #fff;
-    width: 40px;
-    height: 40px;
-    
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    padding-top: 7px;
-}
-.socialfooter .fa-whatsapp{
-    background-color: #0bef2d;
-    color: #fff;
-    width: 40px;
-    height: 40px;
-   
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    padding-top: 7px;
-}
+
 .fa-facebook{
     background-color: #1B7ECB;
     color: #fff;
     width: 32px;
     height: 32px;
-    
+   
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -81,7 +72,7 @@ html{
     align-items: center;
     justify-content: center;
     padding-top: 7px;
-    border-radius: 5px;
+ 
 }
 .mananav{
     width: 100%;
@@ -152,11 +143,7 @@ html{
     border: none;
     background-color: #f80b0b;
 }
-.img-fluid{
-    width: 40%;
-    margin-left: 30px;
-    border-radius: 10px;
-}
+
 .window-scroll{
     background-color: rgb(15, 66, 88);
     box-shadow: 0 1rem 2rem rgba(0,0,0,0.8);
@@ -190,14 +177,15 @@ html{
     color: #fff;
 }
 .company{
-    width: 250px;
+    width: 350px;
     height: 70px;
     margin: auto;
     padding-top:10px;
-     font-family: sans-serif;
-    font-size: 16px;
+   font-family: sans-serif;
+  font-size: 16px;
      color: #fff;
     font-weight: 700;
+    padding-left:100px;
 }
 .abouttext{
     width: 100%;
@@ -205,9 +193,10 @@ html{
 }
 .jquery{
     width: 100%;
-    height: 400px;
+    height: 800px;
     background-color: #fff;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+   
 }
 .third{
     color: orangered;
@@ -279,8 +268,7 @@ html{
     font-weight: 700;
 }
 .lastfooter{
-    padding: 15px;
-    
+    padding: 25px;
 }
 .socialfooter a{
     color: #fff;
@@ -335,11 +323,7 @@ html{
 .topnav{
     width: 100%;
 }
-.img-fluid{
-   width: 40%;
-   margin-left: 10px;
-   margin-top: 10px;
-}
+
 .login{
     float: right;
     margin-top: -29px;
@@ -387,19 +371,80 @@ html{
 }
 .company h2{
     text-align: center;
-    margin-top: -30px;
+    margin-top: 3px;
+    margin-right:85px;
+}
+.company{
+	padding-top:-10px;
 }
 .jquery{
     width: 100%;
-    height: 650px;
+    height: 1600px;
     background-color: #fff;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin-top: -70px;
+  margin-bottom:450px;
 }
 .navbar-toggler{
     color: #fff;
 }
+.sim{
+	margin-left:50px
 }
+.footer{
+	margin-top:-620px;
+	margin-left:150px;
+}
+.simm{
+	margin-left:40px;
+}
+.one{margin-left:45px;
+	
+}
+.corporate{
+	margin-left:-20px;
+}
+
+.company h2{
+    text-align: center;
+    margin-top: 3px;
+    margin-left:-35px;
+}
+.simu{
+	margin-left:90px;
+	
+}
+
+.sim{
+	margin-left:50px
+}
+
+.simm{
+	
+	margin-left:80px;
+}
+.one{margin-left:75px;
+	
+}
+.corporate{
+	width: 300px;
+	margin-left:30px;
+	margin-top:20px;
+
+}
+.lastfooter{
+	
+padding-left:50px;
+	
+}
+.topnav{
+    position: fixed;
+    top: 190px;
+     width: 100%;
+  
+}
+}
+
+
 
 .footerservice a {
      position: relative;
@@ -448,6 +493,7 @@ html{
 .footanchor:hover {
     color: #d9a93e /* Change to your desired hover color */
 }
+
 .address{
 	color:white;
 	

@@ -3,10 +3,8 @@ package com.example.AptItSolutions.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -27,25 +25,35 @@ public class JobDetailsController {
 
    
 
-    @PostMapping("/savejob")
+	@PostMapping("/savejob")
+	public String createJobDetails(@RequestParam("phoneNumber") String phoneNumber,
+	                               @RequestParam("email") String email,
+	                               @RequestParam("jobTitle") String jobTitle,
+	                               @RequestParam("keySkills") String keySkills,
+	                               @RequestParam("yearsOfExperience") String yearsOfExperience,
+	                               @RequestParam("numberOfPositions") String numberOfPositions,
+	                               @RequestParam("jobDescription") String jobDescription,
+	                               @RequestParam("status")  String statusString) {
 
-    public String createJobDetails(@RequestParam("phoneNumber") String phoneNumber,
-                                   @RequestParam("email") String email,
-                                   @RequestParam("jobTitle") String jobTitle,
-                                   @RequestParam("keySkills") String keySkills,
-                                   @RequestParam("yearsOfExperience") int yearsOfExperience,
-                                   @RequestParam("jobDescription") String jobDescription) {
-        JobDetails jobDetails = new JobDetails();
-        jobDetails.setPhoneNumber(phoneNumber);
-        jobDetails.setEmail(email);
-        jobDetails.setJobTitle(jobTitle);
-        jobDetails.setKeySkills(keySkills);
-        jobDetails.setYearsOfExperience(yearsOfExperience);
-        jobDetails.setJobDescription(jobDescription);
+	    JobDetails jobDetails = new JobDetails();
+	    
+	    jobDetails.setPhoneNumber(phoneNumber);
+	    jobDetails.setEmail(email);
+	    jobDetails.setJobTitle(jobTitle);
+	    jobDetails.setKeySkills(keySkills);
+	    jobDetails.setYearsOfExperience(yearsOfExperience);
+	    jobDetails.setNumberOfPositions(numberOfPositions);
+	    jobDetails.setJobDescription(jobDescription);
 
-        jobDetailsService.saveJobDetails(jobDetails);
-        return "redirect:/adminDashboard";
-    }
+	    // Convert the statusString to a Boolean
+	    boolean status = Boolean.parseBoolean(statusString);
+	    jobDetails.setStatus(status);
+
+	    jobDetailsService.saveJobDetails(jobDetails);
+	    
+	    return "redirect:/adminDashboard";
+	}
+
 
 
     @GetMapping("/alljobs")
@@ -64,41 +72,37 @@ public class JobDetailsController {
         }
     }
 
-//    @PutMapping("/jobupdating/{id}")
-//    public ResponseEntity<JobDetails> updateJobDetails(@PathVariable("id") Long id, @RequestBody JobDetails updatedJobDetails) {
-//        JobDetails jobDetails = jobDetailsService.getJobDetailsById(id);
-//        if (jobDetails != null) {
-//            jobDetails.setPhoneNumber(updatedJobDetails.getPhoneNumber());
-//            jobDetails.setEmail(updatedJobDetails.getEmail());
-//            jobDetails.setJobTitle(updatedJobDetails.getJobTitle());
-//            jobDetails.setKeySkills(updatedJobDetails.getKeySkills());
-//            jobDetails.setYearsOfExperience(updatedJobDetails.getYearsOfExperience());
-//            jobDetails.setJobDescription(updatedJobDetails.getJobDescription());
-//
-//            JobDetails savedJobDetails = jobDetailsService.saveJobDetails(jobDetails);
-//            return new ResponseEntity<>(savedJobDetails, HttpStatus.OK);
-//        } else {
-//            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-//        }
-//    }
+
     
     @PutMapping("/jobupdating/{id}")
-    public JobDetails updateJobDetails(@PathVariable Long id, @RequestParam("phoneNumber") String phoneNumber,
-                                       @RequestParam("email") String email, @RequestParam("jobTitle") String jobTitle,
-                                       @RequestParam("keySkills") String keySkills, @RequestParam("yearsOfExperience") int yearsOfExperience,
+    public JobDetails updateJobDetails(@PathVariable Long id,
+                                       @RequestParam("phoneNumber") String phoneNumber,
+                                       @RequestParam("email") String email,
+                                       @RequestParam("jobTitle") String jobTitle,
+                                       @RequestParam("keySkills") String keySkills,
+                                       @RequestParam("yearsOfExperience") String yearsOfExperience,
+                                       @RequestParam("numberOfPositions") String numberOfPositions,
+                                       @RequestParam("status") String statusString,
                                        @RequestParam("jobDescription") String jobDescription) {
+
         JobDetails updatedJobDetails = jobDetailsService.getJobDetailsById(id);
-        
-            updatedJobDetails.setPhoneNumber(phoneNumber);
-            updatedJobDetails.setEmail(email);
-            updatedJobDetails.setJobTitle(jobTitle);
-            updatedJobDetails.setKeySkills(keySkills);
-            updatedJobDetails.setYearsOfExperience(yearsOfExperience);
-            updatedJobDetails.setJobDescription(jobDescription);
-           
-        
+
+        updatedJobDetails.setPhoneNumber(phoneNumber);
+        updatedJobDetails.setEmail(email);
+        updatedJobDetails.setJobTitle(jobTitle);
+        updatedJobDetails.setKeySkills(keySkills);
+        updatedJobDetails.setYearsOfExperience(yearsOfExperience);
+        updatedJobDetails.setNumberOfPositions(numberOfPositions);
+
+        // Convert the statusString to a Boolean
+        boolean status = Boolean.parseBoolean(statusString);
+        updatedJobDetails.setStatus(status);
+
+        updatedJobDetails.setJobDescription(jobDescription);
+
         return jobDetailsService.updateJobApplication(id, updatedJobDetails);
     }
+
 
 
     @DeleteMapping("/deletejob/{id}")

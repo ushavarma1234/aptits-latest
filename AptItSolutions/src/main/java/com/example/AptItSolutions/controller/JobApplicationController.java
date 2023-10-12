@@ -2,6 +2,8 @@ package com.example.AptItSolutions.controller;
 
 import java.io.IOException;
 import java.sql.Date;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,40 +33,71 @@ public class JobApplicationController {
         this.jobApplicationService = jobApplicationService;
     }
 
+
+
     @PostMapping("/job-applications")
     public ResponseEntity<JobApplication> createJobApplication(
             @RequestParam("name") String name,
             @RequestParam("email") String email,
-            @RequestParam("mobile") long mobile,
-            @RequestParam("fatherName") String fatherName,
-            @RequestParam("dateOfBirth") Date dateOfBirth,
-            @RequestParam("totalExperience") String totalExperience,
-            @RequestParam("relativeExperience") String relativeExperience,
-            @RequestParam("keySkills") String keySkills,
-            @RequestParam("strengths") String strengths,
-            @RequestParam("presentDesignation") String presentDesignation,
-            @RequestParam("companyAddress") String companyAddress,
-            @RequestParam("presentCTC") double presentCTC,
-            @RequestParam("expectedCTC") double expectedCTC,
-            @RequestParam("noticePeriod") String noticePeriod,
+            @RequestParam("mobile") String mobile,
+            @RequestParam(value = "fatherName", required = false) String fatherName,
+            @RequestParam(value = "dateOfBirth", required = false) String dateOfBirth,
+            @RequestParam(value = "totalExperience", required = false) String totalExperience,
+            @RequestParam(value = "relativeExperience", required = false) String relativeExperience,
+            @RequestParam(value = "keySkills", required = false) String keySkills,
+            @RequestParam(value = "strengths", required = false) String strengths,
+            @RequestParam(value = "presentDesignation", required = false) String presentDesignation,
+            @RequestParam(value = "companyAddress", required = false) String companyAddress,
+            @RequestParam(value = "presentCTC", required = false) Double presentCTC,
+            @RequestParam(value = "expectedCTC", required = false) Double expectedCTC,
+            @RequestParam(value = "noticePeriod", required = false) String noticePeriod,
             @RequestParam("resume") MultipartFile resume) {
 
-        // Create a JobApplication object and set the values from request parameters
+        // Ensure that required fields are not empty
+        if (name.isEmpty() || email.isEmpty() || mobile.isEmpty() || resume.isEmpty()) {
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+
+        // Create a new JobApplication object
         JobApplication jobApplication = new JobApplication();
+
+        // Set the properties of the jobApplication object
         jobApplication.setName(name);
         jobApplication.setEmail(email);
-        jobApplication.setMobile(mobile);
-        jobApplication.setFatherName(fatherName);
-        jobApplication.setDateOfBirth(dateOfBirth);
-        jobApplication.setTotalExperience(totalExperience);
-        jobApplication.setRelativeExperience(relativeExperience);
-        jobApplication.setKeySkills(keySkills);
-        jobApplication.setStrengths(strengths);
-        jobApplication.setPresentDesignation(presentDesignation);
         jobApplication.setCompanyAddress(companyAddress);
-        jobApplication.setPresentCTC(presentCTC);
-        jobApplication.setExpectedCTC(expectedCTC);
+        jobApplication.setKeySkills(keySkills);
         jobApplication.setNoticePeriod(noticePeriod);
+        jobApplication.setPresentDesignation(presentDesignation);
+        jobApplication.setRelativeExperience(relativeExperience);
+        jobApplication.setStrengths(strengths);
+        jobApplication.setTotalExperience(totalExperience);
+
+        // Handle optional fields
+        if (mobile != null && !mobile.isEmpty()) {
+            jobApplication.setMobile(Long.parseLong(mobile));
+        }
+        if (fatherName != null && !fatherName.isEmpty()) {
+            jobApplication.setFatherName(fatherName);
+        }
+
+        // Handle dateOfBirth conversion
+        java.sql.Date dateOfBirthSql = null;
+        if (dateOfBirth != null && !dateOfBirth.isEmpty()) {
+            try {
+                SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+                java.util.Date dateOfBirthDate = dateFormat.parse(dateOfBirth);
+                dateOfBirthSql = new java.sql.Date(dateOfBirthDate.getTime());
+            } catch (ParseException e) {
+                // Handle date parsing exception
+            }
+        }
+
+        // Set the dateOfBirth in the JobApplication object
+        jobApplication.setDateOfBirth(dateOfBirthSql);
+
+        // Set presentCTC and expectedCTC
+        jobApplication.setPresentCTC(presentCTC != null ? presentCTC : 0.0);
+        jobApplication.setExpectedCTC(expectedCTC != null ? expectedCTC : 0.0);
 
         try {
             // Set the resume byte array from the uploaded file
@@ -78,6 +111,8 @@ public class JobApplicationController {
 
         return new ResponseEntity<>(savedJobApplication, HttpStatus.CREATED);
     }
+    
+    
 
     @GetMapping("/job-applications")
     public ResponseEntity<List<JobApplication>> getAllJobApplications() {

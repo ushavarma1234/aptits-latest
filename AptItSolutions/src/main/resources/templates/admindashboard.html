@@ -31,7 +31,13 @@
 <script th:src="@{/js/admin.js}" defer></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+
+
+
 </head>
+
+
 <body>
 
 
@@ -165,6 +171,9 @@
 
 						</div>
 					</div>
+					
+					
+					
 					<!-- Add News Model  -->
 					<div class="modal" id="addNewsModalButton">
 						<div class="modal-content">
@@ -241,16 +250,20 @@
 						</div>
 					</div>
 </div>
-					<!--  	edit pop up for job opening  -->
-	<div class="modal fade" id="editCareerModal" tabindex="-1" aria-labelledby="editCareerModalLabel" aria-hidden="true">
+					
+					
+<!-- Edit pop-up for job opening -->
+
+
+<div class="modal fade" id="editCareerModal" tabindex="-1" aria-labelledby="editCareerModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-        <div class="modal-content" id="carrersedit">
+        <div class="modal-content" id="careersEdit">
             <div class="modal-header">
                 <h5 class="modal-title" id="editCareerModalLabel">Edit Form</h5>
                 <label class="close" for="modalToggle" onclick="closeCareer()">&times;</label>
             </div>
             <div class="modal-body">
-                <form action="" method="POST" id="editcareerForm" onsubmit="submitEditCareersForm(event)">
+                <form action="" method="POST" id="editCareerForm" onsubmit="submitEditCareersForm(event)">
                     <input type="hidden" name="_method" value="PUT" />
                     <input type="hidden" name="id" value="" />
 
@@ -264,7 +277,7 @@
                         <input type="text" name="email" id="email">
                     </div>
 
-                    <div class="input-box">
+                    <div class "input-box">
                         <label for="JobTitle">JobTitle:</label>
                         <input type="text" name="jobTitle" id="jobTitle">
                     </div>
@@ -275,13 +288,22 @@
                     </div>
 
                     <div class="input-box">
-                        <label for="Year of Experience">Year of Experience:</label>
+                        <label for="YearsOfExperience">Year of Experience:</label>
                         <input type="text" name="yearsOfExperience" id="yearsOfExperience">
                     </div>
 
                     <div class="input-box">
-                        <label for="Job Description">Job Description:</label>
+                        <label for="JobDescription">Job Description:</label>
                         <input type="text" name="jobDescription" id="jobDescription">
+                    </div>
+
+                    <div class="input-box">
+                        <label for="Status">Status:</label>
+                        <select name="status" id="status">
+                            <option value="Active">Active</option>
+                            <option value="DeActive">DeActive</option>
+                            <!-- Add more options as needed -->
+                        </select>
                     </div>
 
                     <div class="input-box">
@@ -294,66 +316,95 @@
 </div>
 
 
-					<div class="modal" id="addCareersModalButton">
-						<div class="modal-content">
-							<div class="modal-header">
-								<h5 class="modal-title">Add Careers</h5>
-								<label class="close" onclick="closeAddCareersModal()">&times;</label>
-							</div>
-							<div class="modal-body">
-								<form action="/apijobdetails/savejob" method="POST"
-									onsubmit="submitCareersForm(event)">
-									<div class="user-details">
+<--------------Add Careers Page------------>
 
-										<div class="input-box">
-											<label class="details">Phone Number :</label> <input
-												type="text" name="phoneNumber" id="phoneNumber" required>
-										</div>
-										<br>
-										<div class="input-box">
-											<label class="details">Email :</label> <input type="text"
-												name="email" id="email" required>
-										</div>
-										<br>
-										<div class="input-box">
-											<label class="details">JobTitle :</label> <input type="text"
-												name="jobTitle" id="JobTitle" required>
-										</div>
-										<br>
-										<div class="input-box">
-											<label class="details">Key Skills :</label> <input
-												type="text" name="keySkills" id="keySkills" required>
-										</div>
-										<br>
-										<div class="input-box">
-											<label class="details">Year of Experience :</label> <input
-												type="text" name="yearsOfExperience" id="experience"
-												required>
-										</div>
-										<br>
-										<div class="input-box">
-											<label class="details">Job Description :</label>
-											<textarea name="jobDescription" id="jobDescription"></textarea>
-										</div>
+<div class="modal" id="addCareersModalButton">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title">Add Careers</h5>
+            <label class="close" onclick="closeAddCareersModal()">&times;</label>
+        </div>
+        <div class="modal-body">
+            <form action="/apijobdetails/savejob" method="POST" onsubmit="submitEditCareersForm(event)">
+                <div class="user-details">
 
-										<br>
+                    <div class="input-box">
+                        <label class="details">Phone Number :</label>
+                        <input type="text" name="phoneNumber" id="phoneNumber" required>
+                    </div>
+                    <br>
+                    <div class="input-box">
+                        <label class="details">Email :</label>
+                        <input type="text" name="email" id="email" required>
+                    </div>
+                    <br>
+                    <div class="input-box">
+                        <label class="details">JobTitle :</label>
+                        <input type="text" name="jobTitle" id="JobTitle" required>
+                    </div>
+                    <br>
+                    <div class="input-box">
+                        <label class="details">Key Skills :</label>
+                        <input type="text" name="keySkills" id="keySkills" required>
+                    </div>
+                    <br>
+                    
+                    <div class="input-box">
+                        <label class="details">Year of Experience :</label>
+                        <input type="text" name="yearsOfExperience" id="experience" required>
+                    </div>
+                    <br>
+                    
+                    <div class="input-box">
+                        <label class="details">Number Of Positions :</label>
+                        <input type="text" name="numberOfPositions" id="numberOfPositions" required>
+                    </div>
+                    
+                    <div class="input-box">
+                        <label class="details">Job Description :</label>
+                        <textarea name="jobDescription" id="jobDescription"></textarea>
+                    </div>
+                    <br>
+                    
+                    <div class="input-box">
+    <label class="details">Status:</label>
+    <select name="status" id="status" required onchange="changeStatusColor()">
+        <option value="true">Active</option>
+        <option value="false">Inactive</option>
+    </select>
+</div>
+<div class="status-indicator" id="status-indicator"></div>
+                    
+                    <br>
+                    <input type="submit" id="submit" value="submit" name="submit" class="btn btn-info">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+	
+	
+	
+	
+	<script>
+    function changeStatusColor() {
+        const statusSelect = document.getElementById("status");
+        const statusIndicator = document.getElementById("status-indicator");
 
-									</div>
+        if (statusSelect.value === "true") {
+            statusIndicator.classList.remove("inactive");
+            statusIndicator.classList.add("active");
+        } else {
+            statusIndicator.classList.remove("active");
+            statusIndicator.classList.add("inactive");
+        }
+    }
 
-									<input type="submit" id="submit" value="submit" name="submit"
-										class="btn btn-info">
-
-								</form>
-								<!-- <div class="form-action-buttons modal-footer">
-									<a href="/adminDashboard"><button class="btn btn-primary">Click
-											Back</button></a>
-								</div> -->
-							</div>
-
-						</div>
-					</div>
-				</div>
-				
+    // Initialize status color when the page loads
+    window.onload = changeStatusColor;
+</script>		
+			
 				
 				<!--Gallery Page-->
 				<div id="tab3" class="tabcontent">
@@ -466,6 +517,7 @@
 									</tr>
 								</thead>
 								<tbody id="dataContainer4">
+								
 								</tbody>
 							</table>
 						</div>

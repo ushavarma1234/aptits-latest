@@ -116,70 +116,71 @@ h1{
 </style>
 <body>
 
-        <form action="/jobapplication/job-applications" method="POST"  enctype="multipart/form-data" onsubmit="submitForm(event)">
-        	<h2>Please Fill All Details To Get In Touch</h2>
-      <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required>
+    <form action="/jobapplication/job-applications" method="POST" enctype="multipart/form-data" onsubmit="submitForm(event)">
+    <h2>Fill In All The Details</h2>
+    <label for="name">Name:<span style="color: red;">*</span></label>
+    <input type="text" id="name" name="name" placeholder="Your Name" required>
     <span class="error-message" id="name-error"></span>
-    
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email">
+
+    <label for="email">Email:<span style="color: red;">*</span></label>
+    <input type="email" id="email" name="email" placeholder="Your Email" required>
     <span class="error-message" id="email-error"></span>
-    
-          <label for="mobile">Mobile:</label>
-    <input type="tel" id="mobile" name="mobile" maxlength="10" minlength="10">
+
+    <label for="mobile">Mobile Number:<span style="color: red;">*</span></label>
+    <input type="text" id="mobile" name="mobile" maxlength="10" minlength="10" placeholder="Your Mobile Number" required>
     <span class="error-message" id="mobile-error"></span>
-    
+
     <label for="fathername">Father Name:</label>
-    <input type="text" id="fathername" name="fatherName">
+    <input type="text" id="fathername" name="fatherName" placeholder="Father's Name">
     <span class="error-message" id="fathername-error"></span>
-    
+
     <label for="dob">Date of Birth:</label>
-    <input type="date" id="dob" name="dateOfBirth">
+    <input type="date" id="dob" name="dateOfBirth" placeholder="Your Date of Birth">
     <span class="error-message" id="dob-error"></span>
-    
+
     <label for="TotalExp">Total Experience:</label>
-    <input type="text" id="TotalExp" name="totalExperience">
+    <input type="text" id="TotalExp" name="totalExperience" placeholder="Total Experience">
     <span class="error-message" id="TotalExp-error"></span>
-    
-    <label for="RelativeExp">Relative Experience:</label>
-    <input type="text" id="RelativeExp" name="relativeExperience">
-    <span class="error-message" id="RelativeExp-error"></span>
-    
+
+    <label for="RelativeExp">Relevant Experience:</label>
+    <input type="text" id="RelevantExp" name="relevantExperience" placeholder="Relevant Experience">
+    <span class="error-message" id="RelevantExp-error"></span>
+
     <label for="keySkills">Key Skills:</label>
-    <input type="text" id="keySkills" name="keySkills">
+    <input type="text" id="keySkills" name="keySkills" placeholder="Java,Python,.Net">
     <span class="error-message" id="keySkills-error"></span>
-    
+
     <label for="Strengths">Strengths:</label>
-    <input type="text" id="Strengths" name="strengths">
+    <input type="text" id="Strengths" name="strengths" placeholder="Strengths">
     <span class="error-message" id="Strengths-error"></span>
-    
+
     <label for="Designation">Present Designation:</label>
-    <input type="text" id="Designation" name="presentDesignation">
+    <input type="text" id="Designation" name="presentDesignation" placeholder="Developer/Testing/sales/Marketing/">
     <span class="error-message" id="Designation-error"></span>
-    
+
     <label for="CompanyAddress">Company Address:</label>
-    <input type="text" id="CompanyAddress" name="companyAddress">
+    <input type="text" id="CompanyAddress" name="companyAddress" placeholder="Address">
     <span class="error-message" id="CompanyAddress-error"></span>
-    
+
     <label for="PresentCTC">Present CTC:</label>
-    <input type="text" id="PresentCTC" name="presentCTC">
+    <input type="text" id="PresentCTC" name="presentCTC" placeholder="₹">
     <span class="error-message" id="PresentCTC-error"></span>
-    
+
     <label for="ExpectedCTC">Expected CTC:</label>
-    <input type="text" id="ExpectedCTC" name="expectedCTC">
+    <input type="text" id="ExpectedCTC" name="expectedCTC" placeholder="₹">
     <span class="error-message" id="ExpectedCTC-error"></span>
-    
+
     <label for="NoticePeriod">Notice Period:</label>
-    <input type="text" id="NoticePeriod" name="noticePeriod">
+    <input type="text" id="NoticePeriod" name="noticePeriod" placeholder="Months/Days">
     <span class="error-message" id="NoticePeriod-error"></span>
 
-    <label for="resume">Upload Resume:</label>
+    <label for="resume">Upload Resume:<span style="color: red;">*</span></label>
     <input type="file" id="resume" name="resume" required><br><br>
     <span class="error-message" id="resume-error"></span>
 
-    <input type="submit" value="Send Resume">
+    <input type="submit" value="Submit">
 </form>
+
 <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">

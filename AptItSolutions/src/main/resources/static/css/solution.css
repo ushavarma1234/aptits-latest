@@ -327,102 +327,9 @@ html{
     opacity: 1;
     pointer-events:all;
 }
-@media only screen and (max-width: 576px) {
 
-    .fixedicons a{
-        color: green;
-        font-size: 25px;    
-    }
 
-.navbar{
-    overflow: hidden;
-}
-.topnav{
-    width: 100%;
-}
-.img-fluid{
-   width: 40%;
-   margin-left: 10px;
-   margin-top: 10px;
-}
-.login{
-    float: right;
-    margin-top: -29px;
-}
-.fixed{
-    width: 35px;
-    height: 300px;
-    position: fixed;
-    top: 60%;
-    left: 0;
-    border-radius: 10px;
-    transition: all 0.3s ease-out;
-}
-.servicerow{
-    width: 100%;
-    height: 1550px;
-}
-.serviceimg{
-    width: 150px;
-    height: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.head6{
-    font-family: sans-serif;
-    font-weight: 600;
-    font-size: 18px;
-    color: #000;
-    text-align: center;
-    margin-top: -40px;
-}
 
-.navbar{
-    color: white;
-    opacity: 1;
-    visibility: visible;
-}
-.navbar-nav{
-    margin-right: 50px;
-}
-.nav-item .nav-link{
-    color: #fff;
-    font-size: 17px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin-top: 10px;
-}
-.window-scroll{
-    background-color: rgb(15, 66, 88);
-    box-shadow: 0 1rem 2rem rgba(0,0,0,2);
-    transition: 0.4s ease-in-out;
-    margin-top: -7px;
-    color: #fff;
-}
-.overview{
-    width: 100%;
-    height: 90px;
-    background-image: url(images/abt.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-color: gray;
-}
-.company h2{
-    text-align: center;
-    margin-top: -30px;
-}
-.jquery{
-    width: 100%;
-    height: 1600px;
-    background-color: #fff;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin-top: -70px;
-}
-.navbar-toggler{
-    color: #fff;
-}
-}
 .footerservice a {
      position: relative;
     text-decoration: none;
@@ -489,6 +396,146 @@ html{
     color: #F78E21;
     text-decoration: underline;
     text-decoration-color: #fff; /* Replace "YourColor" with the desired text decoration color */
+}
+
+
+@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 576px) {
+.topnav{
+    position: fixed;
+    top: 190px;
+  
+}
+    .fixedicons a{
+        color: green;
+        font-size: 25px;    
+    }
+    
+
+.navbar{
+    overflow: hidden;
+}
+.topnav{
+    width: 100%;
+}
+.img-fluid{
+   width: 40%;
+   margin-left: 10px;
+   margin-top: 10px;
+}
+.login{
+    float: right;
+    margin-top: -29px;
+}
+.fixed{
+    width: 35px;
+    height: 300px;
+    position: fixed;
+    top: 60%;
+    left: 0;
+    border-radius: 10px;
+    transition: all 0.3s ease-out;
+}
+
+.servicerow{
+    width: 100%;
+    height: auto;
+}
+.serviceimg{
+    margin-left: 80px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.navbar{
+    color: white;
+    opacity: 1;
+    visibility: visible;
+}
+.navbar-nav{
+    margin-right: 50px;
+}
+.nav-item .nav-link{
+    color: #fff;
+    font-size: 17px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 10px;
+}
+.window-scroll{
+    background-color: rgb(15, 66, 88);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,2);
+    transition: 0.4s ease-in-out;
+    margin-top: -7px;
+    color: #fff;
+}
+/*Text on Image*/
+.overview{
+    width: 100%;
+    height: 100px;
+    background-image: url(images/abt.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: gray;
+
+}
+    .company h2{
+    text-align: center;
+    margin-top: 13px;
+    margin-right:55px;
+}
+
+.servicesec{
+    width: 100%;
+    height: 197rem;
+}
+.card{
+    margin: 20px auto;
+    z-index: -1;
+}
+.navbar-toggler{
+    color: #fff;
+}
+.company{
+	width:100%;
+	
+}
+.company h2{
+    text-align: center;
+    margin-top: 3px;
+    margin-left:-35px;
+}
+.simu{
+	margin-left:90px;
+	
+}
+
+.sim{
+	margin-left:50px
+}
+.footer{
+	margin-top:-60px;
+	margin-left:150px;
+}
+.simm{
+	margin-left:80px;
+}
+.one{margin-left:75px;
+	
+}
+.corporate{
+	width: 300px;
+	margin-left:30px;
+	margin-top:20px;
+
+}
+.lastfooter{
+	
+padding-left:50px;
+	
+}
+}
+
 }
 
 

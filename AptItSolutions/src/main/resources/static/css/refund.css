@@ -313,20 +313,6 @@ html{
 }
 
 
-@media only screen and (max-width: 576px) {
-    .mananav{
-        overflow: hidden;
-    }
-    .navbar{
-        background-color: #F78E21;
-        color: #fff;
-    }
-.window-scroll{
-        background-color: #F78E21;
-        box-shadow: 0 1rem 2rem rgba(0,0,0,0.8);
-        transition: 0.4s ease-in-out;
-}
-}
 .footerservice a {
      position: relative;
     text-decoration: none;
@@ -395,4 +381,65 @@ html{
     text-decoration-color: #fff; /* Replace "YourColor" with the desired text decoration color */
 }
 
+
+@media only screen and (max-width: 576px) {
+    .mananav{
+        overflow: hidden;
+    }
+    .navbar{
+        background-color: #F78E21;
+        color: #fff;
+    }
+.window-scroll{
+        background-color: #F78E21;
+        box-shadow: 0 1rem 2rem rgba(0,0,0,0.8);
+        transition: 0.4s ease-in-out;
+}
+.footer{
+	margin-top:660px;
+	margin-left:150px;
+}
+.simm{
+	
+	margin-left:80px;
+}
+.one{margin-left:75px;
+	
+}
+.corporate{
+	width: 300px;
+	margin-left:30px;
+	margin-top:20px;
+
+}
+.lastfooter{
+	
+padding-left:50px;
+	
+}
+.topnav{
+    position: fixed;
+    top: 190px;
+     width: 100%;
+  
+}
+.company h2{
+    text-align: center;
+    margin-top: 3px;
+    margin-right:85px;
+}
+.simu{
+	margin-left:90px;
+	
+}
+
+.sim{
+	margin-left:50px
+}
+.second,
+.first{
+	margin-left:30px;
+}
+
+}
 

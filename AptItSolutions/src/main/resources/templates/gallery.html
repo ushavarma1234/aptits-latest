@@ -23,115 +23,26 @@
 	crossorigin="anonymous"></script>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script>(function(w, d) { w.CollectId = "652232f8df70161214ca9c0b"; var h = d.head || d.getElementsByTagName("head")[0]; var s = d.createElement("script"); s.setAttribute("type", "text/javascript"); s.async=true; s.setAttribute("src", "https://collectcdn.com/launcher.js"); h.appendChild(s); })(window, document);</script>
 <link href='http://fonts.googleapis.com/css?family=Raleway'
 	rel='stylesheet' type='text/css'>
 <link href="http://www.jqueryscript.net/css/jquerysctipttop.css"
 	rel="stylesheet" type="text/css">
 
 <style>
-img, svg {
-	horizantal-align: middle;
-	width: 1000px;
-	height: 400px;
-	object-fit: cover;
-}
+    .custom-image {
+        width: 350px; /* Set the width to 300px */
+        height: 400px; /* Set the height to 400px */
+        border: 15px solid white; /* Add a white border */
+        margin: 5px; /* Add some margin for spacing */
+    }
 
-
-/* Style for the hover effect on images */
-#galleryContainer img:hover {
-    transform: scale(1.05); /* Scale up the image on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
-}
-
-#galleryContainer img {
-    flex: 1 1 calc(25% - 20px); /* 20px as a margin for example */
-    margin: 10px; /* Half of 20px */
-}
-
-.navbar-brand {
-	width: 20%;
-}
-
-.button-container {
-	display: flex;
-	justify-content: center;
-	margin-top: 10px;
-}
-
-.image {
-	max-width: 100%;
-	max-height: 400px;
-	display: block;
-	margin: 0 auto;
-}
-
-#tbl-student {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.nav-item a {
-	color: white;
-}
-
-table {
-	width: 50%;
-	height: 50%;
-}
-
-.tabcontent {
-	max-width: auto;
-	max-height: auto;
-	margin-bottom: 50px;
-}
-
-.hidden {
-	display: none;
-}
-
-.show {
-	display: block;
-}
-
-#prevButton {
-	width: 100px;
-	background-color: #084a54;
-}
-
-#nextButton {
-	width: 100px;
-	background-color: #084a54;
-}
-
-img, svg {
-	vertical-align: middle;
-	width: 1000px;
-}
-
-
-
-        .gallery {
-            text-align: center; /* Center align the images */
-            padding-left: 200px;
-            margin-top:100px;
-        }
-
-        .gallery .col-md-3 {
-            display: inline-block;
-            width: calc(25% - 20px); /* 20px as margin for four images in one row */
-            margin: 10px;
-            vertical-align: top;
-        }
-
-        .gallery img {
-           width:400px;
-            height: auto; /* Ensure the same height for all images */
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-        }
-
+    .image-row {
+    margin-left:100px;
+        display: flex; /* Use flexbox to create a row of images */
+        justify-content: space-between; /* Distribute images evenly in the row */
+        flex-wrap: wrap; /* Wrap images to the next row if the container is too narrow */
+    }
 </style>
 </head>
 
@@ -143,7 +54,7 @@ img, svg {
 		
      <li><a href="https://www.facebook.com/profile.php?id=100090510473876"><i class="fa-brands fa-facebook"></i></a></li>
     <li><a href="https://wa.me/+918712655800"><i class="fa-brands fa-whatsapp" ></i></a></li>
-   <li><a href="https://www.instagram.com/aptit_solution/"><i class="fa-brands fa-instagram"></i></a></li>
+   <li><a href="https://www.instagram.com/aptit_solutions/"><i class="fa-brands fa-instagram"></i></a></li>
     <li><a href="https://employers.indeed.com/messages?hl=en&co=IN"><i class="fa-brands fa-linkedin" style="margin-top:0px;background-color:blue"></i></a></li>
     <li><a href="https://twitter.com/info_Aptits"><i class="fa-brands fa-twitter"></i></a></li>
     <li>
@@ -182,7 +93,7 @@ img, svg {
 		style="background-color: rgb(15, 66, 88);">
 		<div class="container-fluid">
 			<a class="navbar-brand" href="/index"><img src="images/im.jpg"
-				class="img-fluid" alt="..."></a>
+				style="width: 130px; height: 80px;border-radius: 8px;" alt="..."></a>
 			<button class="navbar-toggler" type="button"
 				data-bs-toggle="collapse" data-bs-target="#navbarNav"
 				aria-controls="navbarNav" aria-expanded="false"
@@ -195,16 +106,16 @@ img, svg {
 					</li>
 					<li class="nav-item"><a class="nav-link" href="/aboutUs">About
 							us</a></li>
-					<li class="nav-item"><a class="nav-link" href="/training">Trainings</a>
-					</li>
+					<!-- <li class="nav-item"><a class="nav-link" href="/training">Trainings</a>
+					</li> -->
 					<li class="nav-item"><a class="nav-link" href="/service">Services</a>
 					</li>
 					<li class="nav-item"><a class="nav-link" href="/solution">Solutions</a>
 					</li>
 					<li class="nav-item"><a class="nav-link" href="/products">Products</a>
 					</li>
-					<li class="nav-item"><a class="nav-link" href="/news">News
-							& Events</a></li>
+						<li class="nav-item"><a class="nav-link" href="/news">News
+								& Events</a></li>
 					<li class="nav-item"><a class="nav-link" href="/careers">Careers</a>
 					</li>
 
@@ -240,13 +151,15 @@ img, svg {
 	<div class="container-fluid">
 	
 
-	<div class="tabcontent">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-10">
-                <div class="panel-body">
-                    <div class="gallery" id="galleryContainer">
-                     
+
+<div class="container-fluid" style="background-color:black"; >
+    <div class="tabcontent">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="panel-body">
+                        <div class="gallery" id="galleryContainer">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -255,11 +168,11 @@ img, svg {
 </div>
 
 <div class="container-fluid footer"
-		style="background-color: #000048; margin-top: -47px;">
+		style="background-color: #000048; ">
 		<div class="container">
 			<div class="row" style="color: #fff;">
 
-				<div class="col-md-4">
+				<div class="col-md-4 simm">
 					<h3 class="footerh3">COMPANY</h3>
 					<ul class="footerservice">
 						<li><a href="/index"><h5>
@@ -268,14 +181,15 @@ img, svg {
 						<li><a href="/aboutUs"><h5>
 									<i class="fa fa-angle-right"></i>&nbsp;&nbsp;ABOUT US
 								</h5></a></li>
-						<li><a href="/training"><h5>
-									<i class="fa fa-angle-right"></i>&nbsp;&nbsp;TRAININGS
+						<li><a href="/careers"><h5>
+									<i class="fa fa-angle-right"></i>&nbsp;&nbsp;CAREERS
 								</h5></a></li>
+								
 					</ul>
 				
 				</div>
 
-				<div class="col-md-4">
+				<div class="col-md-4 simm">
 					<h3 class="footerh3">OUR SERVICES</h3>
 					<ul class="footerservice">
 						<li><a href="/service"><h5>
@@ -291,25 +205,26 @@ img, svg {
 				
 				</div>
 
-				<div class="col-md-4">
+				<div class="col-md-4 simm">
 					<h3 class="footerh3">CONTACT INFO</h3>
 					<ul class="footerservice">
 						<h6>APT IT SOLUTIONS</h6>
 						<br>
-						<div class="corporate">
+						<div class="cor">
 							 <div class="spac">
                   
                     <h5>  <i class="fa-solid fa-phone"></i>&nbsp;&nbsp;+91 8712655800</h5>
                     <p class="conpara">
                    
                 </div>
-						</div>
+						
 						
 						  <div class="space">
                    
                       <p><a href="mailto:info@aptits.com"><div class="connect"><h5> <i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;info@aptits.com</h5></div></a></p>
                     <p class="conpara"></p>
                  
+                </div>
                 </div>
 
 						
@@ -319,13 +234,14 @@ img, svg {
 				</div>
 			</div><br><br>
 		<div class="row address">
-	<h3 class="footerrh3">Our Locations</h3>
-<div class="col-md-4">
+	<h3 class="footerrh3 one">OUR LOCATIONS</h3>
+<div class="col-md-4 sim">
         <ul class="footerservice">
             <li class="corporate">
                 <h5>HYDERABAD 1:</h5>
                 <p>1-98/7/3/83 Vaibhav Enclave, 2nd Floor, Block-B, Arunodaya
-                    Colony, Madhapur, Hyderabad-500081, India. E-mail:
+                    Colony, Madhapur, Hyderabad-500081, INDIA
+                   . E-mail:
                     info@aptits.com</p>
             </li>
             
@@ -333,63 +249,69 @@ img, svg {
                 <h5>BANGALORE:</h5>
                 <p>A A ARCADE" 2nd floor, Outer Ring Road Opp-Kala Mandir
                     service Road Landmark: Adjacent to AIRTEL office Marathahalli
-                    Bengaluru 560037 Karnataka, INDIA.</p>
+                    Bengaluru 560037 Karnataka, INDIA.
+                   
+                   .</p>
             </li>
           
         </ul>
-        <div class="col-sm-4">
-					<a
-						href="/refund" class="footanchor">Refund Policy</a>
-				</div>
+        
         		
     </div>
 
-    <div class="col-md-4">
+    <div class="col-md-4 sim">
         <ul class="footerservice">
              <li class="corporate">
                 <h5>HYDERABAD 2:</h5>
                 <p>3rd Floor, Sahithi Arcade, Besides SR Nagar Police
-                    Station, S R Nagar, Hyderabad 500 038,<br> India.</p>
+                    Station, S R Nagar, Hyderabad 500038,<br>  INDIA.
+                   </p>
             </li>
             <li class="corporate">
                 <h5>VISAKHAPATNAM :</h5>
                 <p>Door 48-7-70/1,
                     Near Veg Market, NTR Statue,
                     Ramatakies Down, Srinagar, Visakhapatnam 530016, <br>
-                    India.</p>
+                     INDIA.
+                   </p>
             </li>
         </ul><br>
-        <div class="col-sm-4">
-					 <a href="/privacy" class="footanchor">Privacy Policy</a>
-				</div>
+       
     </div>
 
-    <div class="col-md-4">
+    <div class="col-md-4 sim">
         <ul class="footerservice">
             <li class="corporate">
                 <h5>PUNE:</h5>
                 <p>Office No: 301, 3rd Floor, Walchand House Happy Colony
-                    Lane-1, Warje Malwadi Rd, Kothrud, Pune, Maharashtra, India Pin:
-                    411 038</p>
+                    Lane-1, Warje Malwadi Rd, Kothrud, Pune, Maharashtra    411 038, INDIA
+                   .
+                   </p>
             </li>
             
             <li class="corporate">
                 <h5>CHENNAI:</h5>
                 <p>4th Floor, Main Building (Rear), Guna Complex, No.443 & 445, Anna Salai, Teynampet,
-                         Chennai 600018.</p>
+                         Chennai 600018,  INDIA.
+                   .</p>
                                      
             </li>
         </ul><br>
-        <div class="col-sm-4">
+      
+    </div>
+      <div class="col-sm-4 simu">
+					 <a href="/privacy" class="footanchor">Privacy Policy</a>
+				</div>
+				 <div class="col-sm-4 simu">
+					<a
+						href="/refund" class="footanchor">Refund Policy</a>
+				</div>
+				 <div class="col-sm-4 simu">
 					<a href="/termsandcondition" class="footanchor">Terms&nbsp&nbspand&nbsp&nbspConditions</a>
 				</div>
-    </div>
 </div>
 </div>
 </div>
-
-
-
 	<!--LAST FOOTER -->
 	<div class="container-fluid"
 		style="background-color: black; color: #fff;">
@@ -397,54 +319,54 @@ img, svg {
 		
 			<div class="row lastfooter">
 				<div class="col-sm-6" foot>
-					<p>© 2023 Apt It Solutions • All Rights Reserved</p>
+					<p>© 2023 APT IT Solutions • All Rights Reserved</p>
 				</div>
 
 			</div>
 	
 	</div>
 </div>
+</div>
+</div>
 
-	<a href="#" class="to-top"> <i class="fa-solid fa-chevron-up"></i>
 	</a>
 
-	<script>
+
+<script>
     const galleryContainer = document.getElementById("galleryContainer");
 
     fetch("/imageapi/All")
       .then(response => response.json())
       .then(data => {
         if (Array.isArray(data)) {
-        	data.forEach(imageData => {
-        	    const colDiv = document.createElement('div');
-        	    colDiv.className = 'col-md-3';  // Bootstrap class for 1/4th column
+          data.forEach(imageData => {
+            const imageElement = document.createElement("img");
+            imageElement.src = `data:image/jpeg;base64,${imageData.image}`;
+            imageElement.style.width = '350px'; // Set the width to 300px
+            imageElement.style.height = '400px'; // Set the height to 200px
+            imageElement.style.border = '6px solid white'; // Add a white border
+            imageElement.style.margin = '5px'; // Add some margin for spacing
 
-        	    const imageElement = document.createElement("img");
-        	    imageElement.src = `data:image/jpeg;base64,${imageData.image}`;
-        	    imageElement.className = 'img-fluid'; // To make the image responsive
-
-        	    colDiv.appendChild(imageElement);
-        	    galleryContainer.appendChild(colDiv);
-        	});
-
+            galleryContainer.appendChild(imageElement);
+          });
         }
       });
 
-		//Change navbar styles on scrolling
-		window.addEventListener('scroll', () => {
-			document.querySelector('nav').classList.toggle('window-scroll', window.scrollY > 0);
-			document.getElementById("mananav").style.display = "none";
-		});
+    // Change navbar styles on scrolling
+    window.addEventListener('scroll', () => {
+      document.querySelector('nav').classList.toggle('window-scroll', window.scrollY > 0);
+      document.getElementById("mananav").style.display = "none";
+    });
 
-		const toTop = document.querySelector(".to-top");
-		window.addEventListener("scroll", () => {
-			if (window.pageYOffset > 100) {
-				toTop.classList.add("active");
-			} else {
-				toTop.classList.remove("active");
-			}
-		});
-	</script>
+    const toTop = document.querySelector(".to-top");
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset > 100) {
+        toTop.classList.add("active");
+      } else {
+        toTop.classList.remove("active");
+      }
+    });
+</script>
 </body>
 
 </html>

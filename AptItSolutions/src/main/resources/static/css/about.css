@@ -196,6 +196,7 @@ html{
     height: 800px;
     background-color: #fff;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+   
 }
 .third{
     color: orangered;
@@ -370,8 +371,8 @@ html{
 }
 .company h2{
     text-align: center;
-    margin-top: -50px;
-    font-size:20px;
+    margin-top: 3px;
+    margin-right:85px;
 }
 .company{
 	padding-top:-10px;
@@ -381,12 +382,69 @@ html{
     height: 1600px;
     background-color: #fff;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin-top: -70px;
+  margin-bottom:450px;
 }
 .navbar-toggler{
     color: #fff;
 }
+.sim{
+	margin-left:50px
 }
+.footer{
+	margin-top:-620px;
+	margin-left:150px;
+}
+.simm{
+	margin-left:40px;
+}
+.one{margin-left:45px;
+	
+}
+.corporate{
+	margin-left:-20px;
+}
+
+.company h2{
+    text-align: center;
+    margin-top: 3px;
+    margin-left:-35px;
+}
+.simu{
+	margin-left:90px;
+	
+}
+
+.sim{
+	margin-left:50px
+}
+
+.simm{
+	
+	margin-left:80px;
+}
+.one{margin-left:75px;
+	
+}
+.corporate{
+	width: 300px;
+	margin-left:30px;
+	margin-top:20px;
+
+}
+.lastfooter{
+	
+padding-left:50px;
+	
+}
+.topnav{
+    position: fixed;
+    top: 190px;
+     width: 100%;
+  
+}
+}
+
+
 
 .footerservice a {
      position: relative;

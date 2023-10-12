@@ -486,131 +486,7 @@ html{
 
 
 
-@media only screen and (max-width: 576px) {
 
-    .fixedicons a{
-        color: green;
-        font-size: 25px;    
-    }
-
-.navbar{
-    color: white;
-    opacity: 1;
-    visibility: visible;
-}
-.navbar-nav{
-    margin-right: 50px;
-}
-.nav-item .nav-link{
-    color: #fff;
-    font-size: 17px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin-top: 10px;
-}
-
-.navbar-brand{width:100%;
-	
-	
-}
-.navbar-toggler{
-    color: #fff;
-}
-.topnav{
-    width: 100%;
-}
-
-.apt{
-    margin-left: -120px;
-    font-size: 12px;
-    margin-top: 50px;
-    box-shadow: 2px 25px 20px rgba(0, 0, 0, 1);
-}
-.techno{
-    margin-left: -120px;
-    font-size: 25px;
-    font-weight: 700;
-    box-shadow: 2px 25px 20px rgba(0, 0, 0, 0.6);
-}
-.sollu{
-    margin-left: -120px;
-    font-size: 25px;
-    font-weight: 700;
-    box-shadow: 2px 25px 20px rgba(0, 0, 0, 0.3);
-}
-.text{
-    display: none;
-}
-.fa-play{
-    font-size: 35px;
-    visibility: visible;
-    animation-timing-function: ease-in-out;
-    animation-duration: 1.3s;
-    background-color: #f80b0b;
-    color: #fff;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    padding-left: 5px; 
-    padding-top: 10px;
-    animation: fa-play .5s infinite alternate linear;
-
-}
-@keyframes fa-play{
-    from{
-        transform: scale(.7);
-    }
-    to{
-        transform: scale(1);
-    }
-}
-.login{
-    float: right;
-    margin-top: -29px;
-}
-.fixed{
-    width: 35px;
-    height: 300px;
-    position: fixed;
-    top: 60%;
-    left: 0;
-    border-radius: 10px;
-    transition: all 0.3s ease-out;
-}
-.serbtn{
-    padding: 5px 12px;
-    background-color: orange;
-    border: none;
-    border-radius: 10px;
-    color: #fff;
-}
-
-
-.head6{
-    text-align: center;
-    font-family: sans-serif;
-    font-weight: 600;
-    font-size: 12px;
-    color: #000;
-    margin-top: -20px;
-}
-.window-scroll{
-    background-color: rgb(15, 66, 88);
-    box-shadow: 0 1rem 2rem rgba(0,0,0,2);
-    transition: 0.4s ease-in-out;
-    margin-top: -7px;
-    color: #fff;
-}
-.container-fluid .unhead{
-    width: 200px;
-    height: 30px; 
-}
-}
-
-
-        
           
         /* Apply box shadow to individual images within the marquee */
 
@@ -644,13 +520,6 @@ html{
         clear: both; /* Clear the float to start a new row */
     }
 
-    /* Add custom styles for larger screens */
-    @media (min-width: 992px) {
-        .col-md-3 {
-            width: 33.3333%; /* Set column width to 33.3333% for 3 columns in a row */
-        }
-    }
-
 
 .img-fluid {
     max-width: 100%;
@@ -668,25 +537,6 @@ html{
     height: 50px;
     background-color:yellow;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1091,8 +941,170 @@ html{
 
 
 
-@media only screen and (max-width: 576px) {
 
+.slideup{
+	visibility:hidden;
+}
+.slide{
+	animation-name:slide;
+	animation-duration:1s;
+	visibility:visible;
+}
+
+@keyframes slide
+{
+	0%
+	{
+	opacity:0;
+	transform:translateY(75%);
+	}
+	
+	100%{
+	opacity:1;
+	transform:translateY(0%);
+	}
+}
+
+.card{
+	position:relative;
+	height:425px;
+	width:360px;
+	background-color:navyblue;
+	box-shadow:20px 20px 40px rgba(0,0,0,0.7)
+}
+
+
+.servicerow {
+    width: 100%;
+    height: auto;
+    padding-left: 10px; /* Adjust the padding-left to create space on the left side */
+    padding-right: 10px;
+    
+}
+
+.service{
+	display:flex;
+}
+.card-body {
+ flex: 1 1 auto;
+    margin: 2px;
+    padding: 2rem;
+    
+}
+
+.card-title{
+	font-size:20px;
+	text-align:center;
+	font-style: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Add this CSS code to your stylesheet or in a <style> block in your HTML */
+
+.footerservice a {
+     position: relative;
+    text-decoration: none;
+    color: #fff;
+}
+
+.footerservice a::before {
+   content: "";
+    position: absolute;
+    bottom: -2px; /* Adjust the position of the underline as needed */
+    left: 0;
+    width: 0;
+    height: 2px; /* Adjust the height of the underline as needed */
+    background-color: #fff; /* Adjust the color of the underline as needed */
+    transition: width 0.3s ease; /* Adjust the transition duration as needed */
+}
+
+.footerservice a:hover::before {
+    width: 30%;
+}
+
+/* Add this CSS code to your stylesheet or in a <style> block in your HTML */
+
+.footanchor {
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+}
+
+.footanchor::before {
+    content: "";
+    position: absolute;
+    bottom: -2px; /* Adjust the position of the underline as needed */
+    left: 0;
+    width: 0;
+    height: 2px; /* Adjust the height of the underline as needed */
+    background-color: #fff; /* Adjust the color of the underline as needed */
+    transition: width 0.3s ease; /* Adjust the transition duration as needed */
+}
+
+.footanchor:hover::before {
+    width: 100%;
+}
+
+.footanchor:hover {
+    color: #d9a93e /* Change to your desired hover color */
+}
+
+.social-icon {
+  position: relative;
+  display: inline-block;
+}
+
+.whatsapp-name {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.social-icon:hover .facebook-name {
+  opacity: 1;
+  visibility: visible;
+}
+
+.call{
+	display:flex;
+}
+
+.call h1{
+	margin-rleft:40px;
+}
+
+
+.address{
+	color:white;
+	
+}
+
+.space{
+	margin-top:25px;
+}
+
+.spac{
+	margin-top:10px;
+}
+
+.footerrh3 {
+    margin-top: 55px;
+    color: #F78E21;
+    text-decoration: underline;
+    text-decoration-color: #fff; /* Replace "YourColor" with the desired text decoration color */
+}
+
+
+@media only screen and (max-width: 576px) {
+.navbar-brand img {
+	width: 56%;
+	height:80px;
+	background-color:yellow;
+	
+}
+	
     .fixedicons a{
         color: green;
         font-size: 25px;    
@@ -1102,10 +1114,192 @@ html{
     color: white;
     opacity: 1;
     visibility: visible;
+    overflow:hidden;
+    width:100%;
+background-color:pink;
+    
 }
-.navbar-nav{
-    margin-right: 50px;
+
+.nav-item .nav-link{
+    color: #fff;
+    font-size: 17px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 10px;
 }
+
+.navbar-brand{width:100%;
+	
+	
+}
+.navbar-toggler{
+    color: #fff;
+    margin-right:50px;
+    
+}
+.topnav{
+    width: 100%;
+}
+
+.apt{
+    margin-left: -120px;
+    font-size: 12px;
+    margin-top: 50px;
+    box-shadow: 2px 25px 20px rgba(0, 0, 0, 1);
+}
+.techno{
+    margin-left: -120px;
+    font-size: 25px;
+    font-weight: 700;
+    box-shadow: 2px 25px 20px rgba(0, 0, 0, 0.6);
+}
+.sollu{
+    margin-left: -120px;
+    font-size: 25px;
+    font-weight: 700;
+    box-shadow: 2px 25px 20px rgba(0, 0, 0, 0.3);
+}
+.text{
+    display: none;
+}
+.fa-play{
+    font-size: 35px;
+    visibility: visible;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1.3s;
+    background-color: #f80b0b;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-left: 5px; 
+    padding-top: 10px;
+    animation: fa-play .5s infinite alternate linear;
+
+}
+@keyframes fa-play{
+    from{
+        transform: scale(.7);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+
+.login{
+    float: right;
+    margin-top: -29px;
+}
+.fixed{
+    width: 35px;
+    height: 300px;
+    position: fixed;
+    top: 60%;
+    left: 0;
+    border-radius: 10px;
+    transition: all 0.3s ease-out;
+}
+.serbtn{
+    padding: 5px 12px;
+    background-color: orange;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+}
+
+
+
+.head6{
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    color: #000;
+    margin-top: -20px;
+}
+.window-scroll{
+    background-color: rgb(15, 66, 88);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,2);
+    transition: 0.4s ease-in-out;
+    margin-top: -7px;
+    color: #fff;
+}
+.container-fluid .unhead{
+    width: 200px;
+    height: 30px; 
+}
+.company h2{
+    text-align: center;
+    margin-top: 3px;
+    margin-left:-35px;
+}
+.simu{
+	margin-left:90px;
+	
+}
+
+.sim{
+	margin-left:50px
+}
+.footer{
+	margin-top:-60px;
+	margin-left:150px;
+}
+.simm{
+	
+	margin-left:80px;
+}
+.one{margin-left:75px;
+	
+}
+.corporate{
+	width: 300px;
+	margin-left:30px;
+	margin-top:20px;
+
+}
+.lastfooter{
+	
+padding-left:50px;
+	
+}
+.topnav{
+    position: fixed;
+    top: 190px;
+     width: 100%;
+  
+}
+
+
+    .fixedicons a{
+        color: green;
+        font-size: 25px;    
+    }
+   
+ 
+     .card {
+     margin-left:80px;
+     background-color:blue;
+        width: 100%; /* Set a smaller width for mobile devices */
+        max-width: 300px; /* Make sure the image doesn't exceed the container's width */
+    }
+    .card-title{
+    height:50px;
+  
+    }
+
+.body{
+	height:50px;
+}
+
+.navbar{
+    color: white;
+    opacity: 1;
+    visibility: visible;
+}
+
 .nav-item .nav-link{
     color: #fff;
     font-size: 17px;
@@ -1193,7 +1387,6 @@ html{
 }
 
 
-
 .head6{
     text-align: center;
     font-family: sans-serif;
@@ -1213,167 +1406,7 @@ html{
     width: 200px;
     height: 30px; 
 }
+
+
+
 }
-
-.slideup{
-	visibility:hidden;
-}
-.slide{
-	animation-name:slide;
-	animation-duration:1s;
-	visibility:visible;
-}
-
-@keyframes slide
-{
-	0%
-	{
-	opacity:0;
-	transform:translateY(75%);
-	}
-	
-	100%{
-	opacity:1;
-	transform:translateY(0%);
-	}
-}
-
-.card{
-	position:relative;
-	height:425px;
-	width:360px;
-	background-color:navyblue;
-	box-shadow:20px 20px 40px rgba(0,0,0,0.7)
-}
-
-
-.servicerow {
-    width: 100%;
-    height: auto;
-    padding-left: 10px; /* Adjust the padding-left to create space on the left side */
-    padding-right: 10px;
-    
-}
-
-.service{
-	display:flex;
-}
-.card-body {
- 
-  
-    flex: 1 1 auto;
-    margin: 2px;
-    padding: 2rem;
-    
-}
-
-
-
-.card-title{
-	font-size:20px;
-	text-align:center;
-	font-style: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-/* Add this CSS code to your stylesheet or in a <style> block in your HTML */
-
-.footerservice a {
-     position: relative;
-    text-decoration: none;
-    color: #fff;
-}
-
-.footerservice a::before {
-   content: "";
-    position: absolute;
-    bottom: -2px; /* Adjust the position of the underline as needed */
-    left: 0;
-    width: 0;
-    height: 2px; /* Adjust the height of the underline as needed */
-    background-color: #fff; /* Adjust the color of the underline as needed */
-    transition: width 0.3s ease; /* Adjust the transition duration as needed */
-}
-
-.footerservice a:hover::before {
-    width: 30%;
-}
-
-/* Add this CSS code to your stylesheet or in a <style> block in your HTML */
-
-.footanchor {
-    position: relative;
-    text-decoration: none;
-    color: #fff;
-}
-
-.footanchor::before {
-    content: "";
-    position: absolute;
-    bottom: -2px; /* Adjust the position of the underline as needed */
-    left: 0;
-    width: 0;
-    height: 2px; /* Adjust the height of the underline as needed */
-    background-color: #fff; /* Adjust the color of the underline as needed */
-    transition: width 0.3s ease; /* Adjust the transition duration as needed */
-}
-
-.footanchor:hover::before {
-    width: 100%;
-}
-
-.footanchor:hover {
-    color: #d9a93e /* Change to your desired hover color */
-}
-
-.social-icon {
-  position: relative;
-  display: inline-block;
-}
-
-.whatsapp-name {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.social-icon:hover .facebook-name {
-  opacity: 1;
-  visibility: visible;
-}
-.imglogo{
-	width:80px;
-	height:50px;
-	border-radius:10px;
-}
-.call{
-	display:flex;
-}
-
-.call h1{
-	margin-rleft:40px;
-}
-
-
-.address{
-	color:white;
-	
-}
-
-.space{
-	margin-top:25px;
-}
-
-.spac{
-	margin-top:10px;
-}
-
-.footerrh3 {
-    margin-top: 55px;
-    color: #F78E21;
-    text-decoration: underline;
-    text-decoration-color: #fff; /* Replace "YourColor" with the desired text decoration color */
-}
-
